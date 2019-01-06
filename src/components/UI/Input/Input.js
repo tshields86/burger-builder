@@ -49,7 +49,7 @@ const input = (props) => {
 
   let validationError = null;
   if (props.invalid && props.touched) {
-    validationError = <p className={classes.ValidationError}>Please Enter a valid {props.label.toLowerCase()}.</p>;
+    validationError = <p className={classes.ValidationError}>Please Enter a valid {props.label ? props.label.toLowerCase() : 'value'}.</p>;
   }
 
   return (
